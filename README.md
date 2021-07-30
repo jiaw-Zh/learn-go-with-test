@@ -1,3 +1,3 @@
-# learn go with test
+# Learn Go with Test
 
 使用 TDD 学习 Go 语言
