@@ -1,6 +1,6 @@
 package helloworld
 
-import "fmt"
+// import "fmt"
 
 const englishHelloPrefix = "Hello, "
 const chinese = "chinese"
@@ -13,13 +13,13 @@ const spanishHelloPrefix = "Hola, "
 // 	if name == "" {
 // 		name = World
 // 	}
-	// if language == chinese {
-	// 	return perchinese + name
-	// }
-	// if language == spanish {
-    //     return spanishHelloPrefix + name
-    // }
-	// 重构分支语句
+// if language == chinese {
+// 	return perchinese + name
+// }
+// if language == spanish {
+//     return spanishHelloPrefix + name
+// }
+// 重构分支语句
 // 	switch language {
 // 	case chinese:
 // 		return perchinese + name
@@ -31,27 +31,25 @@ const spanishHelloPrefix = "Hola, "
 // }
 
 func Hello(name string, language string) string {
-    if name == "" {
-        name = "World"
-    }
+	if name == "" {
+		name = "World"
+	}
 
-    return greetingPrefix(language) + name
+	return greetingPrefix(language) + name
 }
 
-func greetingPrefix(language string) (prefix string) {
-    switch language {
-    case chinese:
-        prefix = perchinese
-    case spanish:
-        prefix = spanishHelloPrefix
-    default:
-        prefix = englishHelloPrefix
-    }
-    return
+func greetingPrefix(language string) (prefix string) { //(prefix string) 命名返回值
+	switch language {
+	case chinese:
+		prefix = perchinese
+	case spanish:
+		prefix = spanishHelloPrefix
+	default:
+		prefix = englishHelloPrefix
+	}
+	return
 }
 
-
-
-func main() {
-	fmt.Println(Hello("charles", ""))
-}
+// func main() {
+// 	fmt.Println(Hello("charles", ""))
+// }
